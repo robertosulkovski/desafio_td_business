@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Construir uma solução analítica utilizando dados da Relação Anual de Informações Sociais (RAIS) dos anos de 2020, 2021 e 2022 para apoiar análises do mercado de trabalho formal no estado de Santa Catarina.
+Construir uma solução analítica utilizando dados da Relação Anual de Informações Sociais (RAIS) dos anos de 2020, 2021 e 2022, com foco na análise do mercado de trabalho formal no estado de Santa Catarina.
 
 O projeto contempla todas as etapas do processo analítico, desde a preparação e consolidação dos dados até a construção de dashboards interativos no Power BI.
 
@@ -23,35 +23,42 @@ O projeto contempla todas as etapas do processo analítico, desde a preparação
 
 ### 1. Inventário e Compreensão dos Dados
 
-Nesta etapa foi realizado o levantamento dos arquivos disponibilizados, análise do dicionário de dados e identificação das variáveis relevantes para o desenvolvimento dos indicadores.
+Nesta etapa foi realizada a exploração inicial das bases da RAIS 2020, 2021 e 2022, com o objetivo de compreender a estrutura dos dados, identificar as variáveis relevantes para as análises e mapear os relacionamentos necessários para a modelagem dimensional.
+
+Foram avaliadas informações relacionadas à remuneração, vínculos empregatícios, perfil dos trabalhadores, localização geográfica e classificação econômica (CNAE).
 
 ### 2. Tratamento e Padronização
 
+Após a análise inicial, foi realizada a preparação dos dados para garantir consistência entre as bases dos diferentes anos da RAIS.
+
 Principais atividades executadas:
 
-- Padronização de nomes de colunas
-- Conversão de tipos de dados
-- Tratamento de valores ausentes
-- Remoção de inconsistências
-- Validação de integridade dos dados
+- Padronização dos nomes das colunas para um formato único.
+- Conversão de tipos de dados para formatos adequados à análise.
+- Tratamento de valores ausentes e registros inconsistentes.
+- Padronização de categorias utilizadas nas análises demográficas.
+- Criação de variáveis derivadas, como faixas etárias e indicadores de vínculos ativos.
+- Validação da qualidade e integridade dos dados antes da consolidação das bases.
 
 ### 3. Consolidação das Bases
 
-Os dados dos anos:
+Após a etapa de tratamento e padronização, as bases da RAIS referentes aos anos de 2020, 2021 e 2022 foram integradas em uma única base analítica.
 
-- 2020
-- 2021
-- 2022
+A consolidação permitiu a construção de uma visão histórica do mercado de trabalho formal em Santa Catarina, possibilitando análises comparativas entre períodos e a identificação de tendências ao longo do tempo.
 
-foram consolidados em uma única base analítica, permitindo análises históricas e comparações temporais.
+Como resultado, foi criada uma base unificada contendo informações sobre vínculos empregatícios, remuneração, perfil dos trabalhadores, localização geográfica e atividade econômica, servindo como fonte para a modelagem dimensional e para os dashboards desenvolvidos no Power BI.
 
 ### 4. Modelagem Dimensional
 
-Foi desenvolvido um modelo estrela para otimizar o desempenho e a análise dos dados.
+Para otimizar o desempenho das análises e facilitar a construção dos dashboards, foi desenvolvido um modelo dimensional no formato Star Schema (Modelo Estrela).
+
+A modelagem foi estruturada com uma tabela fato central contendo os registros dos vínculos empregatícios e tabelas dimensão responsáveis por fornecer o contexto analítico das informações.
 
 #### Tabela Fato
 
 - fato_vinculos
+
+Armazena as métricas e informações relacionadas aos vínculos de trabalho, incluindo remuneração, tempo de emprego, situação do vínculo e chaves de relacionamento com as dimensões.
 
 #### Tabelas Dimensão
 
@@ -62,18 +69,33 @@ Foi desenvolvido um modelo estrela para otimizar o desempenho e a análise dos d
 - dim_raca
 - dim_sexo
 
+As dimensões permitem analisar os indicadores sob diferentes perspectivas demográficas, geográficas e econômicas, possibilitando segmentações e comparações utilizadas nos dashboards do Power BI.
+
 ---
 
 ## Indicadores Desenvolvidos
 
+Foram desenvolvidas medidas analíticas para monitorar o mercado de trabalho formal sob diferentes perspectivas.
+
+### Indicadores de Volume
+
 - Total de Vínculos
 - Vínculos Ativos
 - Percentual de Vínculos Ativos
-- Tempo Médio de Emprego
+- Total de Desligamentos
+
+### Indicadores de Remuneração
+
 - Remuneração Média
 - Remuneração Máxima
 - Remuneração Mínima
-- Total de Desligamentos
+
+### Indicadores de Permanência
+
+- Tempo Médio de Emprego
+
+### Indicadores de Cobertura Analítica
+
 - Quantidade de Municípios
 - Quantidade de CNAEs
 
@@ -153,20 +175,24 @@ Identificar diferenças salariais entre grupos e regiões.
 
 ## Principais Insights
 
+A análise dos dados da RAIS 2020–2022 permitiu identificar padrões relevantes sobre o mercado de trabalho formal em Santa Catarina.
+
 ### Mercado de Trabalho
 
-- Houve crescimento dos vínculos formais entre 2020 e 2022.
-- Florianópolis, Joinville e Blumenau concentram grande parte dos vínculos ativos do estado.
+- Observou-se crescimento do número de vínculos formais ao longo do período analisado, evidenciando a expansão do mercado de trabalho formal entre 2020 e 2022.
+- Florianópolis, Joinville e Blumenau destacam-se como os principais polos de emprego formal do estado, concentrando parcela significativa dos vínculos ativos.
 
 ### Perfil dos Trabalhadores
 
-- Predominância da faixa etária entre 30 e 39 anos.
-- Ensino Médio Completo representa o maior grupo de escolaridade.
+- A faixa etária entre 30 e 39 anos representa a maior participação entre os trabalhadores com vínculo formal.
+- O Ensino Médio Completo constitui o nível de escolaridade predominante entre os vínculos analisados.
+- A distribuição dos vínculos por sexo e raça/cor evidencia a importância de análises segmentadas para compreensão da composição do mercado de trabalho.
 
 ### Remuneração
 
-- Existem diferenças significativas de remuneração entre municípios.
-- Alguns municípios apresentam remuneração média superior à média estadual.
+- Foram identificadas diferenças relevantes de remuneração entre municípios e setores econômicos.
+- Alguns municípios apresentam remuneração média significativamente superior à média estadual, evidenciando desigualdades regionais.
+- A análise indicou diferenças salariais entre os grupos avaliados.
 
 ---
 
@@ -185,6 +211,7 @@ desafio_td_business/
 │   └── pagina_4.png
 │
 ├── Bases/
+│   └── Arquivos utilizados no processamento
 │
 ├── desafio_td_business.pbix
 │
@@ -200,6 +227,8 @@ desafio_td_business/
 ## Como Executar
 
 ### Ambiente Python
+
+Instale as dependências do projeto:
 
 ```bash
 pip install -r requirements.txt
@@ -219,7 +248,11 @@ utilizando o Power BI Desktop.
 
 ## Resultados
 
-O projeto entrega uma visão consolidada do mercado de trabalho formal em Santa Catarina entre 2020 e 2022, permitindo análises demográficas, econômicas, temporais e regionais por meio de dashboards interativos.
+O projeto resultou na construção de uma solução analítica completa para exploração dos dados da RAIS 2020–2022, abrangendo desde o tratamento e consolidação das bases até a modelagem dimensional e o desenvolvimento de dashboards interativos no Power BI.
+
+A solução permite analisar o mercado de trabalho formal em Santa Catarina sob diferentes perspectivas, incluindo aspectos demográficos, econômicos, temporais e regionais, apoiando a identificação de padrões, tendências e disparidades salariais.
+
+Além dos resultados analíticos, o projeto demonstrou a aplicação prática de conceitos de preparação de dados, modelagem dimensional, criação de indicadores e visualização de informações para suporte à tomada de decisão.
 
 ---
 
