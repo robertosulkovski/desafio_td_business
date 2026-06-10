@@ -1,3 +1,9 @@
+# Dados processados
+data/processed/
+
+# Dados brutos
+Bases/
+
 # Ambiente virtual
 .venv/
 
@@ -8,14 +14,12 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Dados brutos
-Bases/
-
-# Dados gerados
-assets/
-
 # VS Code
 .vscode/
 
-# Arquivos temporários
+# Temporários
 *.tmp
+
+# Sistema
+.DS_Store
+Thumbs.db
