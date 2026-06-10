@@ -109,17 +109,20 @@ Indicadores principais:
 
 - Total de vínculos
 - Vínculos ativos
-- Tempo médio de emprego
+- Tempo médio de permanência
 - Remuneração média
 
-Análises do perfil dos trabalhadores:
+Análises realizadas:
 
-- Faixa etária
-- Escolaridade
-- Sexo
-- Raça/Cor
+- Vínculos por faixa etária
+- Vínculos por escolaridade
+- Vínculos por setor econômico (CNAE)
+- Vínculos por raça/cor
+- Vínculos por sexo
 
-Distribuição dos vínculos por setor econômico.
+Objetivo:
+
+Apresentar uma visão consolidada do mercado de trabalho formal em Santa Catarina, destacando indicadores gerais e o perfil dos trabalhadores.
 
 ![Página 1 - Visão Geral](assets/pagina_1.png)
 
@@ -127,15 +130,15 @@ Distribuição dos vínculos por setor econômico.
 
 ### Página 2 – Análise Geográfica
 
-Análise da distribuição dos vínculos ativos por:
+Análises realizadas:
 
-- Municípios
-- Regiões Imediatas
-- Regiões Intermediárias
+- Top 10 municípios por vínculos ativos
+- Vínculos ativos por região intermediária
+- Vínculos ativos por região imediata
 
 Objetivo:
 
-Identificar os principais polos de emprego e concentração de vínculos formais no estado.
+Identificar os principais polos de emprego formal e a distribuição geográfica dos vínculos no estado.
 
 ![Página 2 - Análise Geográfica](assets/pagina_2.png)
 
@@ -151,7 +154,7 @@ Indicadores analisados:
 
 Objetivo:
 
-Avaliar tendências do mercado de trabalho e evolução salarial ao longo do período.
+Avaliar tendências do mercado de trabalho formal e da remuneração ao longo do período analisado.
 
 ![Página 3 - Análise Econômica e Temporal](assets/pagina_3.png)
 
@@ -161,13 +164,13 @@ Avaliar tendências do mercado de trabalho e evolução salarial ao longo do per
 
 Análises realizadas:
 
-- Comparação da remuneração média dos municípios em relação à média estadual
-- Disparidade salarial por sexo
-- Disparidade salarial por raça/cor
+- Municípios com maior remuneração média em comparação à média estadual
+- Remuneração média por sexo
+- Remuneração média por raça/cor
 
 Objetivo:
 
-Identificar diferenças salariais entre grupos e regiões.
+Comparar o desempenho salarial dos municípios e identificar diferenças de remuneração entre grupos demográficos.
 
 ![Página 4 - Comparações Regionais](assets/pagina_4.png)
 
