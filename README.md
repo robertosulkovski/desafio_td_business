@@ -210,15 +210,10 @@ desafio_td_business/
 │   ├── pagina_3.png
 │   └── pagina_4.png
 │
-├── Bases/
-│   └── Arquivos utilizados no processamento
-│
 ├── desafio_td_business.pbix
-│
+├── Desafio Técnico - Analista de Dados.pdf
 ├── README.md
-│
 ├── requirements.txt
-│
 └── .gitignore
 ```
 
